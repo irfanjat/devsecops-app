@@ -85,7 +85,3 @@ Requires: Docker, kind, kubectl, gh CLI with auth.
 - **Immutable tags** — Every deploy uses unique Git SHA tag; no `:latest` in prod
 - **Audit trail** — SARIF reports in GitHub Security tab
 - **MTTR reduction** — Security issues caught in CI, not in production
-
-## Resume Keywords Added
-
-DevSecOps, SAST, DAST, Trivy, OPA, Conftest, Rego, Bandit, hadolint, policy-as-code, shift-left, container hardening, non-root container, read-only filesystem, capabilities drop, CVE scanning, supply chain security, immutable infrastructure, GitOps, ArgoCD, GitHub Actions, SARIF, least privilege, security context, Pod Security Standards, admission control, vulnerability management
