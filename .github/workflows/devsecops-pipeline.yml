@@ -136,10 +136,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check OPA policies against K8s manifests
-        uses: instrumenta/conftest-action@v1
-        with:
-          files: k8s/deployment.yaml
-          policy: policies/
+        run: |
+          docker run --rm -v $PWD:/project \
+            openpolicyagent/conftest test k8s/deployment.yaml -p policies/
 
   deploy:
     name: Stage 6 - Deploy (GitOps)
