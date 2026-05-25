@@ -1,10 +1,10 @@
-FROM python:3.12-slim AS builder
+FROM python:3.12-slim-bookworm AS builder
 
 WORKDIR /app
 COPY app/requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
-FROM python:3.12-slim
+FROM python:3.12-slim-bookworm
 
 RUN addgroup --system --gid 1000 appuser && \
     adduser --system --uid 1000 --gid 1000 appuser
