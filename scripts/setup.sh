@@ -31,7 +31,13 @@ cd - && rm -rf "$TEMP_DIR"
 
 # Setup GitHub secrets
 echo "Setting up GitHub secrets..."
-gh secret set CONFIG_REPO_PAT -b"<your-github-pat>" --repo irfanjat/devsecops-app
+echo "Enter your GitHub Personal Access Token (repo scope):"
+read -r PAT
+if [ -z "$PAT" ]; then
+  echo "Error: PAT cannot be empty"
+  exit 1
+fi
+gh secret set CONFIG_REPO_PAT -b"$PAT" --repo irfanjat/devsecops-app
 
 # Deploy to kind cluster
 if command -v kind >/dev/null 2>&1; then

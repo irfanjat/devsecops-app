@@ -1,0 +1,16 @@
+.git
+.github
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+*.egg-info
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+bandit-report.json
+trivy-results.sarif
+test-results.xml

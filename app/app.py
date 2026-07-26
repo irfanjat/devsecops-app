@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 import os
-import hashlib
 
 app = Flask(__name__)
 
