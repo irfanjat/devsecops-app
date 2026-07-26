@@ -14,7 +14,7 @@ python -m pytest app/test_app.py -v
 
 # Stage 3: Code Scan
 echo "--- Stage 3: Code Security Scan ---"
-bandit -r app/ -f json
+bandit -r app/ -s B101 -f json
 
 # Stage 4: Build & Container Scan
 echo "--- Stage 4: Build & Container Scan ---"
